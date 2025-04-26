@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+aiofiles
+psycopg2-binary
+transformers 
+torch
