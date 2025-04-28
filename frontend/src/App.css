@@ -1,0 +1,145 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #ec4899);
+  color: #f9fafb;
+}
+
+/* Container for the app */
+.app-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+header p {
+  font-size: 1.25rem;
+  color: #d1d5db;
+}
+
+/* Textarea styling */
+textarea.journal-input {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  resize: none;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+textarea.journal-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #ec4899;
+  background-color: #fff;
+  color: #111827;
+}
+
+/* Submit button styling */
+button.submit-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: #ec4899;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(236, 72, 153, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background: #db2777;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.8);
+}
+
+button.submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Journal entries container */
+.entries-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual journal entry card */
+.entry-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.entry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
+}
+
+/* Entry content */
+.entry-content {
+  font-size: 1rem;
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+/* Entry footer with emotion and timestamp */
+.entry-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+/* Emotion icon */
+.emotion-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Timestamp */
+.timestamp {
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .app-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
